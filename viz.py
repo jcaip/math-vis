@@ -117,27 +117,17 @@ ax.set_ylim(old_axis[1])
 plt.savefig("output/Qaxis.png", bbox_inches='tight')
 
 #arithmetic
-# plt.figure(figsize=figure_size)
-# ax = plt.subplot(111)
-# plt.title("Z x Z \ {0}")
-# plt.xticks(data)
-# plt.yticks(no_zero)
-# ax.spines['right'].set_visible(False)
-# ax.spines['top'].set_visible(False)
-# ax.spines['bottom'].set_position('center')
-# ax.spines['left'].set_position('center')
-
 plt.title("Arithmetic in Z:  -3 / 2 = -1 + -(1/2)")
 plt.savefig("output/start.png", bbox_inches='tight')
 
 #too lazy to figure out matplotlib animation
 images =[imageio.imread('output/start.png')]
-vectors = [ (1, -3, 8, '-3 = (1, -3)'),
-            (1, 2, 12, '2 = (1, 2)'),
-            (2, -3, 5, '-3 / 2  = (1*2, 1*-3)'),
-            (1, -1, 4, '-1 = (1, -1)'),
-            (2, -1, 1, '-1/2 = (2, -1)'),
-            (-2, 3, 5, '-1 + -1/2 = (1*-1 + -1*2, -1*-1) = -3/2')]
+vectors = [ (-3, 1, 0, '-3 = (-3, 1)'),
+            (2, 1, 18, '2 = (2, 1)'),
+            (-3, 2, 2, '-3 / 2  = (-3*1, 1*2)'),
+            (-1, 1, 4, '-1 = (-1, 1)'),
+            (-2, 1, 1, '-1/2 = (1, -2)'),
+            (3, -2, 2, '-1 + -1/2 = (-1*-2 + 1*1, -2*1) = -3/2')]
 
 for i, (_, _, _, title) in enumerate(vectors):
     for j in range(i+1):
